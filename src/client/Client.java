@@ -26,13 +26,13 @@ public class Client {
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         ClientJFrame cjf = new ClientJFrame();
-       // cjf.show();
+        cjf.show();
         Socket socket = new Socket(InetAddress.getLocalHost(), 8888);
         dataFromServer = new DataInputStream(socket.getInputStream());
         dataToServer = new DataOutputStream(socket.getOutputStream());
         //dataToServer.writeChar('C');
         while (true) {
-            ClientJFrame.clientMessageArea.append("Server:\n\t"+dataFromServer.readUTF()+'\n');
+            ClientJFrame.clientMessageArea.append("Server:\n\t" + dataFromServer.readUTF() + '\n');
         }
         //System.out.println(dataFromServer.readUTF());
 
