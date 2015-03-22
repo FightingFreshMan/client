@@ -27,6 +27,7 @@ public class Client {
         // TODO code application logic here
         ClientJFrame cjf = new ClientJFrame();
         cjf.show();
+        //test
         Socket socket = new Socket(InetAddress.getLocalHost(), 8888);
         dataFromServer = new DataInputStream(socket.getInputStream());
         dataToServer = new DataOutputStream(socket.getOutputStream());
